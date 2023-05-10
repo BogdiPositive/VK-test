@@ -1,0 +1,17 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.RadioGroup--mode-horizontal {
+  display: flex;
+}
+
+/**
+ * CMP:
+ * FormItem
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormItem) .RadioGroup {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin: 0 calc(-1 * var(--vkui--size_base_padding_horizontal--regular));
+  box-sizing: content-box;
+}

@@ -1,0 +1,16 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Progress {
+  border-radius: 1px;
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_track_background);
+  height: 2px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Progress__in {
+  height: 100%;
+  border-radius: inherit;
+  transition: width 0.2s ease;
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_stroke_accent);
+}

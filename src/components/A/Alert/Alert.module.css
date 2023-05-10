@@ -1,0 +1,404 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert {
+  user-select: none;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+  position: relative;
+  min-width: 280px;
+  max-width: 416px;
+  margin: auto 24px;
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: var(--vkui--elevation4);
+/* stylelint-disable-next-line custom-property-pattern */
+  border-radius: var(--vkui--size_border_radius_paper--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  animation: vkui-animation-android-alert-intro 0.2s var(--vkui--animation_easing_platform);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--desktop {
+  width: 100%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--closing {
+  transform: scale(0.95);
+  opacity: 0;
+/* stylelint-disable-next-line custom-property-pattern */
+  transition: transform 0.2s var(--vkui--animation_easing_platform),
+/* stylelint-disable-next-line custom-property-pattern */
+    opacity 0.2s var(--vkui--animation_easing_platform);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_modal);
+  content: '';
+  border-radius: inherit;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert__content {
+  position: relative;
+  padding: 24px 24px 20px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert__action {
+  white-space: nowrap;
+  background: transparent;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert__actions {
+  display: flex;
+  max-width: 100%;
+  position: relative;
+  padding: 0 16px 16px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert__header {
+  margin-bottom: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert__text {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_secondary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--h .Alert__actions {
+  justify-content: flex-end;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--h .Alert__button {
+  margin-left: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--v .Alert__actions {
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--v .Alert__button {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--v .Alert__button:first-child {
+  margin-top: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--v .Alert__button:last-child {
+  margin-bottom: 0;
+}
+
+/**
+ * iOS version
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios {
+  width: 270px;
+  min-width: 270px;
+  overflow: hidden;
+/* stylelint-disable-next-line custom-property-pattern */
+  animation: vkui-animation-ios-alert-intro 0.3s var(--vkui--animation_easing_platform);
+  box-shadow: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios.Alert--closing {
+  transform: none;
+  opacity: 0;
+/* stylelint-disable-next-line custom-property-pattern */
+  transition: opacity 0.3s var(--vkui--animation_easing_platform);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios .Alert__content {
+  padding: 19px 16px 20px;
+  text-align: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios .Alert__header:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios .Alert__text {
+  color: inherit;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios .Alert__content::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 1px;
+  right: 0;
+  left: 0;
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_separator_primary_alpha);
+  transform-origin: center bottom;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios .Alert__actions {
+  padding: initial;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios.Alert--v .Alert__actions {
+  flex-direction: column;
+  align-items: initial;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios .Alert__action {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-family: var(--vkui--font_family_base);
+  position: relative;
+  font-size: 17px;
+  line-height: 44px;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_accent);
+  border: 0;
+  padding: 0 6px;
+  margin: 0;
+  height: 44px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  border-radius: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios .Alert__action::after {
+  content: '';
+  position: absolute;
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_separator_primary_alpha);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios.Alert--h .Alert__action::after {
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  transform-origin: right center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios.Alert--h .Alert__action:last-child::after {
+  content: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios.Alert--h .Alert__action {
+  flex-grow: 1;
+  flex-shrink: 1;
+/* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  flex-basis: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios.Alert--h .Alert__action:first-child {
+/* stylelint-disable-next-line custom-property-pattern */
+  border-bottom-left-radius: var(--vkui--size_border_radius_paper--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios.Alert--h .Alert__action:last-child {
+/* stylelint-disable-next-line custom-property-pattern */
+  border-bottom-right-radius: var(--vkui--size_border_radius_paper--regular);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios.Alert--v .Alert__action::after {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  transform-origin: center bottom;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios.Alert--v .Alert__action:last-child::after {
+  content: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios.Alert--v .Alert__action:last-child {
+  border-radius: 0 0 12px 12px;
+}
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media (min-resolution: 2dppx) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Alert--ios .Alert__content::after,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Alert--ios.Alert--v .Alert__action::after {
+    transform: scaleY(0.5);
+  }
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Alert--ios.Alert--h .Alert__action::after {
+    transform: scaleX(0.5);
+  }
+}
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media (min-resolution: 3dppx) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Alert--ios .Alert__content::after,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Alert--ios.Alert--v .Alert__action::after {
+    transform: scaleY(0.33);
+  }
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Alert--ios.Alert--h .Alert__action::after {
+    transform: scaleX(0.33);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios .Alert__action--mode-cancel {
+  font-weight: 600;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--ios .Alert__action--mode-destructive {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_negative);
+}
+
+/**
+ * VKCOM
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--vkcom {
+/* stylelint-disable-next-line alpha-value-notation */
+/* stylelint-disable-next-line alpha-value-notation */
+/* stylelint-disable-next-line color-function-notation */
+/* stylelint-disable-next-line color-function-notation */
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.12), 0 0 96px rgba(0, 0, 0, 0.16);
+  width: 400px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--vkcom .Alert__content {
+  padding: 24px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--vkcom .Alert__actions {
+  padding: 0 24px 16px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--vkcom .Alert__button {
+  order: 2;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Alert--vkcom .Alert__button--mode-cancel {
+  order: 1;
+}
+
+/**
+ * Animations
+ */
+@keyframes vkui-animation-ios-alert-intro {
+  from {
+    opacity: 0;
+    transform: scale(1.05);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes vkui-animation-android-alert-intro {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

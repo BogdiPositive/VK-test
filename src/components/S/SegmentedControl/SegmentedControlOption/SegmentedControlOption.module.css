@@ -1,0 +1,69 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.SegmentedControlOption {
+  height: 100%;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+  transition: color 100ms ease-out;
+  user-select: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  appearance: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.SegmentedControlOption :global(.vkuiIcon) {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_primary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SegmentedControlOption:not(.SegmentedControlOption--checked):hover {
+  opacity: 0.5;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SegmentedControlOption__content {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_text--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_text--line_height--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  font-weight: var(--vkui--font_weight_accent2);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SegmentedControlOption__content--sizeY-compact.SegmentedControlOption__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_footnote--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_footnote--line_height--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  font-weight: var(--vkui--font_weight_accent3);
+}
+
+@media (--sizeY-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .SegmentedControlOption__content--sizeY-none.SegmentedControlOption__content {
+/* stylelint-disable-next-line custom-property-pattern */
+    font-size: var(--vkui--font_footnote--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+    line-height: var(--vkui--font_footnote--line_height--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+    font-weight: var(--vkui--font_weight_accent3);
+  }
+}

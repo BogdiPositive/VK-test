@@ -1,0 +1,23 @@
+/* stylelint-disable @project-tools/stylelint-atomic */
+/* stylelint-disable-next-line selector-class-pattern */
+.AccordionSummary::-webkit-details-marker {
+  display: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.AccordionSummary__icon {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_secondary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Accordion:not([open]) > summary .AccordionSummary__icon--collapse {
+  display: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Accordion[open] > summary .AccordionSummary__icon--expand {
+  display: none;
+}

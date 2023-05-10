@@ -1,0 +1,52 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-height: 36px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarHeader__pickers {
+  display: flex;
+  position: absolute;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarHeader__picker + .CalendarHeader__picker {
+  margin-left: 4px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarHeader__nav-icon {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarHeader__nav-icon--accent {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_accent);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarHeader__nav-icon-next {
+  right: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarHeader__nav-icon-prev {
+  left: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarHeader__month {
+  text-transform: capitalize;
+}

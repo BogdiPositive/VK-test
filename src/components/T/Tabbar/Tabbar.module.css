@@ -1,0 +1,47 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Tabbar {
+  position: fixed;
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui_internal--z_index_tabs);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+/* stylelint-disable-next-line custom-property-pattern */
+  height: var(--vkui_internal--tabbar_height);
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-bottom: var(--vkui_internal--safe_area_inset_bottom);
+  box-sizing: content-box;
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_background_tertiary);
+  display: flex;
+  overflow: hidden;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Tabbar--shadow {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: var(--vkui--elevation3);
+}
+
+/**
+ * iOS
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Tabbar--ios.Tabbar--shadow {
+  box-shadow: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Tabbar--ios.Tabbar--shadow::before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+/* stylelint-disable-next-line custom-property-pattern */
+  height: var(--vkui_internal--thin_border);
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_separator_primary_alpha);
+  content: '';
+}

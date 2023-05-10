@@ -1,0 +1,138 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_background_modal);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar--shadow {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: var(--vkui--elevation3);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar__before,
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar__form,
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar__after {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar__form {
+  min-height: 52px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar__formIn {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  position: relative;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar__textarea {
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  background: transparent;
+  border: none;
+  resize: none;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+/* stylelint-disable-next-line property-no-vendor-prefix */
+  -webkit-appearance: none;
+  max-height: 120px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar__textarea::placeholder {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_subhead);
+/* stylelint-disable-next-line comment-empty-line-before */
+  /* Для Firefox */
+  opacity: 1;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar__textarea:focus {
+  outline: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar__inlineAfter {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar__before {
+  padding-left: 4px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar__after {
+  padding-right: 4px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar__textarea {
+  height: 52px;
+  padding: 16px 12px;
+}
+
+/**
+ * iOS
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar--ios .WriteBar__before,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar--ios .WriteBar__after {
+  padding: 0 4px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar--ios .WriteBar__formIn {
+  box-sizing: border-box;
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_write_bar_input_background);
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  border: var(--vkui_internal--thin_border) solid var(--vkui--color_write_bar_input_border);
+  border-radius: 18px;
+  margin: 8px 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar--ios .WriteBar__formIn:first-child {
+  margin-left: 12px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar--ios .WriteBar__inlineAfter {
+  margin-right: -1px;
+  margin-top: -9px;
+  margin-bottom: -9px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.WriteBar--ios .WriteBar__textarea {
+  height: 34px;
+  padding: 6px 11px;
+  font-size: 17px;
+  line-height: 22px;
+}

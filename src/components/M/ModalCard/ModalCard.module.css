@@ -1,0 +1,77 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCard {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  padding: 8px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCard__in {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  transform: translateY(calc(100% + 16px));
+/* stylelint-disable-next-line custom-property-pattern */
+  transition: transform 340ms var(--vkui--animation_easing_platform);
+}
+
+/**
+ * iOS
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCard--ios .ModalCard__in {
+  max-width: 414px;
+}
+
+/**
+ * Android + vkcom
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCard--android .ModalCard__in {
+  max-width: 440px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCard--vkcom .ModalCard__in {
+  max-width: 400px;
+}
+
+/**
+ * Desktop
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCard--desktop {
+  align-items: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCard--desktop .ModalCard__in {
+  transform: unset;
+  opacity: 0;
+/* stylelint-disable-next-line custom-property-pattern */
+  transition: opacity 340ms var(--vkui--animation_easing_platform);
+}
+
+/**
+ * CMP:
+ * ModalRoot
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalModalRoot--touched) .ModalCard__in {
+  transition: none;
+}

@@ -1,0 +1,83 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalRoot {
+  width: 100%;
+  height: 100%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalRoot__mask {
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+/* stylelint-disable-next-line alpha-value-notation */
+/* stylelint-disable-next-line color-function-notation */
+  background: rgba(0, 0, 0, 0.4);
+  user-select: none;
+  transition: opacity 167ms ease-out;
+  animation: vkui-animation-fadeIn 0.32s ease;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalRoot--touched .ModalRoot__mask {
+  transition: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalRoot--switching .ModalRoot__mask {
+  /** Во время автоматической анимации смены модалок с фоном взаимодействовать нельзя */
+  pointer-events: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalRoot__viewport {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+/* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  left: 0;
+  pointer-events: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+:not(.ModalRoot--desktop).ModalRoot .ModalRoot__viewport {
+/* stylelint-disable-next-line custom-property-pattern */
+  top: var(--vkui_internal--safe_area_inset_top);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+:not(.ModalRoot--desktop).ModalRoot--vkapps .ModalRoot__viewport {
+  top: calc(
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+    var(--vkui_internal--safe_area_inset_top) + var(--vkui--size_panel_header_height--regular)
+  );
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalRoot__modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* stylelint-disable-next-line keyframes-name-pattern */
+@keyframes vkui-animation-fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

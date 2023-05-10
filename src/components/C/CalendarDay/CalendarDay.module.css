@@ -1,0 +1,122 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay {
+  border-radius: 0;
+  font-size: 14px;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+/* stylelint-disable-next-line custom-property-pattern */
+  font-family: var(--vkui--font_family_base);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay__hidden,
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay {
+  height: 36px;
+  flex-basis: calc(100% / 7);
+  flex-grow: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay__hidden--size-s,
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay--size-s {
+  height: 34px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay--disabled,
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay--not-same-month {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_tertiary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay--selected {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay--selection-start.CalendarDay--selected,
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay__hinted--selection-start {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay--selection-end.CalendarDay--selected,
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay__hinted--selection-end {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay__day-number {
+  text-align: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay--today {
+  font-weight: 600;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay--today .CalendarDay__day-number::after {
+  content: '';
+/* stylelint-disable-next-line custom-property-pattern */
+  border-bottom: 2px solid var(--vkui--color_stroke_accent);
+  width: 16px;
+  display: block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay--today .CalendarDay__inner--active .CalendarDay__day-number::after {
+/* stylelint-disable-next-line custom-property-pattern */
+  border-bottom-color: var(--vkui--color_stroke_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay__inner,
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay__hinted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay__inner {
+  border-radius: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay__hinted--active,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay--hover :not(.CalendarDay__hinted--active) .CalendarDay__inner {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary_alpha--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarDay__inner--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_accent);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast);
+}

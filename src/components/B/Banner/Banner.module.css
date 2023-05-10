@@ -1,0 +1,230 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner {
+  isolation: isolate;
+  margin: 12px 0;
+/* stylelint-disable-next-line custom-property-pattern */
+  padding: 0 var(--vkui--size_base_padding_horizontal--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__in {
+  position: relative;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: stretch;
+  padding: 12px 12px 12px 16px;
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary);
+/* stylelint-disable-next-line custom-property-pattern */
+  border-radius: var(--vkui--size_border_radius--regular);
+  overflow: hidden;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__in::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  border: var(--vkui_internal--thin_border) solid var(--vkui--color_image_border_alpha);
+  border-radius: inherit;
+  pointer-events: none;
+  box-sizing: border-box;
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui_internal--z_index_banner_content);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__before {
+  position: relative;
+  margin-right: 12px;
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui_internal--z_index_banner_content);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__content {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-width: 0;
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui_internal--z_index_banner_content);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__header {
+  display: block;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__subheader {
+  display: block;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_subhead);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__text {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_subhead);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui_internal--z_index_banner_background);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__bg,
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__bg > * {
+  width: 100%;
+  height: 100%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__aside {
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-end;
+  width: 28px;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_tertiary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__dismiss {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_secondary);
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui_internal--z_index_banner_hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__actions {
+  margin-top: 12px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__subheader:not(:first-child),
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner__text:not(:first-child) {
+  margin-top: 2px;
+}
+
+/**
+ * Mode "image"
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner--mode-image .Banner__in {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner--mode-image .Banner__dismiss,
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner--inverted {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner--inverted .Banner__subheader {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast);
+  opacity: 0.72;
+}
+
+/**
+ * Size "s"
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner--size-s .Banner__before {
+  margin-left: -4px;
+}
+
+/**
+ * Size "m"
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner--size-m .Banner__in {
+  padding: 16px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner--size-m .Banner__subheader:not(:first-child),
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner--size-m .Banner__text:not(:first-child) {
+  margin-top: 4px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner--ios .Banner__dismiss,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Banner--ios.Banner--mode-image .Banner__dismiss {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_tertiary);
+}
+
+/**
+ * CMP:
+ * FormStatus
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormStatus) .Banner__in::before {
+  border: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormStatus--mode-error) .Banner__in {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_negative_tint);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormStatus--mode-error) .Banner__subheader {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_background_negative);
+}

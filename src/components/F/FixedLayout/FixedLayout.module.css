@@ -1,0 +1,81 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.FixedLayout {
+  position: fixed;
+  box-sizing: border-box;
+/* stylelint-disable-next-line comment-empty-line-before */
+  /**
+   * ⚠️ WARNING ⚠️
+   * `left: auto` решает следующие задачи:
+   * 1. При фиксированной ширине компонента позиционирует компонент по центру.
+   * 2. При использовании `SplitLayout` позиционирует компонент с права от `<SplitCol fixed />`.
+   *
+   * Подробности можно почитать здесь https://github.com/VKCOM/VKUI/pull/2472
+   *
+   * Единственное, есть проблема при срабатывании insets в landscape ориентации экрана (https://github.com/VKCOM/VKUI/issues/2422).
+   */
+  left: auto;
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui_internal--z_index_fixed_layout);
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui_internal--safe_area_inset_left);
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-right: var(--vkui_internal--safe_area_inset_right);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.FixedLayout--filled {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_background_content);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.FixedLayout--vertical-top {
+  width: 100%;
+  top: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.FixedLayout--vertical-bottom {
+  width: 100%;
+  bottom: 0;
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-bottom: var(--vkui_internal--safe_area_inset_bottom);
+}
+
+/**
+ * CMP:
+ * Epic
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalEpic--hasTabbar) .FixedLayout--vertical-bottom {
+  padding-bottom: calc(
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+    var(--vkui_internal--tabbar_height) + var(--vkui_internal--safe_area_inset_bottom)
+  );
+}
+
+/**
+ * CMP:
+ * PanelHeader
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalPanelHeader) ~ .FixedLayout--vertical-top,
+/* stylelint-disable-next-line selector-class-pattern */
+:global(.vkuiInternalPanelHeader)
+  ~ *
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .FixedLayout--vertical-top:not(:global(.vkuiInternalPanelHeader__fixed)) {
+  top: calc(
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+    var(--vkui--size_panel_header_height--regular) + var(--vkui_internal--safe_area_inset_top)
+  );
+}

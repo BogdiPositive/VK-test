@@ -1,0 +1,7 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Div {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding: var(--vkui--size_base_padding_vertical--regular)
+/* stylelint-disable-next-line custom-property-pattern */
+    var(--vkui--size_base_padding_horizontal--regular);
+}

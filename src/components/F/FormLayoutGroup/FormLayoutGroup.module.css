@@ -1,0 +1,89 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.FormLayoutGroup--mode-horizontal {
+  display: flex;
+/* stylelint-disable-next-line custom-property-pattern */
+  padding: var(--vkui--size_form_item_padding_vertical--regular)
+/* stylelint-disable-next-line custom-property-pattern */
+    var(--vkui--size_base_padding_horizontal--regular);
+  flex-wrap: wrap;
+  align-items: flex-start;
+  isolation: isolate;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.FormLayoutGroup__removable {
+  flex-grow: 1;
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.FormLayoutGroup__offset {
+  display: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.FormLayoutGroup--mode-horizontal
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalFormItem--withTop)
+/* stylelint-disable-next-line selector-class-pattern */
+  ~ .FormLayoutGroup__offset {
+  order: -1;
+  display: block;
+  min-width: 100%;
+/* stylelint-disable-next-line custom-property-pattern */
+  height: calc(2px + var(--vkui--font_subhead--line_height--regular) + 8px);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.FormLayoutGroup--sizeY-compact.FormLayoutGroup--mode-horizontal
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalFormItem--withTop)
+/* stylelint-disable-next-line selector-class-pattern */
+  ~ .FormLayoutGroup__offset {
+/* stylelint-disable-next-line custom-property-pattern */
+  height: calc(2px + var(--vkui--font_subhead--line_height--compact) + 6px);
+}
+
+@media (--sizeY-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .FormLayoutGroup--sizeY-none.FormLayoutGroup--mode-horizontal
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+    :global(.vkuiInternalFormItem--withTop)
+/* stylelint-disable-next-line selector-class-pattern */
+    ~ .FormLayoutGroup__offset {
+/* stylelint-disable-next-line custom-property-pattern */
+    height: calc(2px + var(--vkui--font_subhead--line_height--compact) + 6px);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.FormLayoutGroup--removable {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.FormLayoutGroup--segmented {
+  position: relative;
+}
+
+/* stylelint-disable vkui/atomic */
+/* stylelint-disable-next-line selector-class-pattern */
+.FormLayoutGroup--segmented > * {
+  min-width: 0;
+  flex: 1;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-not-notation */
+.FormLayoutGroup--segmented > *:not(:first-child):not(.FormLayoutGroup__offset) {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-left: calc(-1 * var(--vkui_internal--thin_border));
+}

@@ -1,0 +1,18 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.FormLayout {
+  position: relative;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.FormLayout__submit {
+  position: absolute;
+  visibility: hidden;
+  pointer-events: none;
+  left: 0;
+  top: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  appearance: none;
+  border: none;
+}

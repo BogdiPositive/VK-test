@@ -1,0 +1,29 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Subhead {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_subhead--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_subhead--line_height--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  font-weight: var(--vkui--font_subhead--font_weight--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  font-family: var(--vkui--font_subhead--font_family--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Subhead--sizeY-compact {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_subhead--font_size--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_subhead--line_height--compact);
+}
+
+@media (--sizeY-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+  .Subhead--sizeY-none {
+/* stylelint-disable-next-line custom-property-pattern */
+    font-size: var(--vkui--font_subhead--font_size--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+    line-height: var(--vkui--font_subhead--line_height--compact);
+  }
+}

@@ -1,0 +1,45 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Spinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_medium);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Spinner__self {
+/* stylelint-disable-next-line custom-property-pattern */
+  animation: vkui-spinner-rotator var(--vkui_internal--duration) linear infinite;
+  transform-origin: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Spinner__self svg {
+  transform: scale(1);
+}
+
+/**
+ * CMP:
+ * PanelHeader
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalPanelHeader) .Spinner {
+/* stylelint-disable-next-line value-keyword-case */
+  color: currentColor;
+}
+
+@keyframes vkui-spinner-rotator {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

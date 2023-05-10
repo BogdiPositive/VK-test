@@ -1,0 +1,25 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarTime {
+  display: flex;
+  align-items: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarTime__picker {
+  width: 77px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarTime__divider {
+  margin-left: 6px;
+  margin-right: 6px;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+/* stylelint-disable-next-line custom-property-pattern */
+  font-family: var(--vkui--font_family_base);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarTime__button {
+  margin-left: auto;
+}

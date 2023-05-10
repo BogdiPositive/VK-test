@@ -1,0 +1,36 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.DatePicker {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.DatePicker__container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.DatePicker__day {
+  min-width: 72px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.DatePicker__month {
+  min-width: 0;
+  display: flex;
+  flex: 1 0 0;
+  padding: 0 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.DatePicker__year {
+  min-width: 92px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.DatePicker__monthSelect {
+  width: 100%;
+}

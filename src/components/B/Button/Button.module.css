@@ -1,0 +1,1316 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Button {
+  position: relative;
+  display: inline-block;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+/* stylelint-disable-next-line custom-property-pattern */
+  min-height: var(--vkui--size_button_small_height--compact);
+  margin: 0;
+  padding: 0;
+  user-select: none;
+/* stylelint-disable-next-line custom-property-pattern */
+  border-radius: var(--vkui--size_border_radius--regular);
+  max-width: 100%;
+/* stylelint-disable-next-line custom-property-pattern */
+  min-width: var(--vkui--size_button_minimum_width--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  font-family: var(--vkui--font_family_base);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--loading {
+  cursor: progress;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--singleIcon {
+/* stylelint-disable-next-line custom-property-pattern */
+  width: var(--vkui--size_button_small_height--compact);
+  min-width: initial;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--sizeY-regular.Button--singleIcon {
+/* stylelint-disable-next-line custom-property-pattern */
+  width: var(--vkui--size_button_small_height--regular);
+}
+
+@media (--sizeY-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Button--sizeY-none.Button--singleIcon {
+/* stylelint-disable-next-line custom-property-pattern */
+    width: var(--vkui--size_button_small_height--regular);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--stretched {
+  display: block;
+  width: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Button__in {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: inherit;
+  text-align: center;
+  box-sizing: border-box;
+/* stylelint-disable-next-line custom-property-pattern */
+  font-family: var(--vkui--font_family_base);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--align-left .Button__in {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--align-center {
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--align-right .Button__in {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Button[disabled] {
+/* stylelint-disable-next-line custom-property-pattern */
+  opacity: var(--vkui--opacity_disable);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-not-notation */
+.Button--mode-primary[disabled]:not(.Button--appearance-overlay):not(
+/* stylelint-disable-next-line selector-class-pattern */
+    .Button--appearance-negative
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-not-notation */
+  ):not(.Button--appearance-positive),
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-secondary[disabled]:not(.Button--appearance-overlay),
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary[disabled]:not(.Button--appearance-overlay),
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline[disabled]:not(.Button--appearance-overlay) {
+  opacity: 0.64;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--with-icon {
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Button__content {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+/* stylelint-disable-next-line custom-property-pattern */
+  font-weight: var(--vkui--font_weight_accent2);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-s .Button__content:first-child {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_button_base_small_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-s .Button__content:last-child,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-s .Button__after {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-right: var(--vkui--size_button_base_small_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-m .Button__content:first-child {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_button_base_medium_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-m .Button__content:last-child,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-m .Button__after {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-right: var(--vkui--size_button_base_medium_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-l .Button__content:first-child {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_button_base_large_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-l .Button__content:last-child,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-l .Button__after {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-right: var(--vkui--size_button_base_large_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-s .Button__before {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_button_base_small_padding_horizontal_icon--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-m .Button__before {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_button_base_medium_padding_horizontal_icon--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-l .Button__before {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_button_base_large_padding_horizontal_icon--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--size-s .Button__content:first-child {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_button_tertiary_small_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--size-s .Button__content:last-child,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--size-s .Button__after {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-right: var(--vkui--size_button_tertiary_small_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--size-m .Button__content:first-child {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_button_tertiary_medium_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--size-m .Button__content:last-child,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--size-m .Button__after {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-right: var(--vkui--size_button_tertiary_medium_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--size-l .Button__content:first-child {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_button_tertiary_large_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--size-l .Button__content:last-child,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--size-l .Button__after {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-right: var(--vkui--size_button_tertiary_large_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--size-s .Button__before {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_button_tertiary_small_padding_horizontal_icon--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--size-m .Button__before {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_button_tertiary_medium_padding_horizontal_icon--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--size-l .Button__before {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_button_tertiary_large_padding_horizontal_icon--regular);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--singleIcon .Button__after,
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--singleIcon .Button__before,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--singleIcon .Button__after,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--singleIcon .Button__before {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-link {
+  background: none;
+  min-width: initial;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-link .Button__after,
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-link .Button__before,
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-link .Button__content:first-child,
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-link .Button__content:last-child {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Button__spinner {
+/* stylelint-disable-next-line value-keyword-case */
+  color: currentColor;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+/* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  bottom: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button__spinner + .Button__in {
+  visibility: hidden;
+}
+
+/* Button's backgrounds */
+/* stylelint-disable-next-line comment-empty-line-before */
+/* Mode  = Primary */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-accent {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_accent_themed);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-accent.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_accent_themed--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-accent.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_accent_themed--active);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-positive {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_positive);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-positive.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_positive--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-positive.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_positive--active);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-negative {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_negative);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-negative.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_negative--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-negative.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_negative--active);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-neutral {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-neutral.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-neutral.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary--active);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-accent-invariable {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_accent);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-accent-invariable.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_accent--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-accent-invariable.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_accent--active);
+}
+
+/* Mode = Secondary */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-secondary {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary_alpha);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-secondary.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary_alpha--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-secondary.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary_alpha--active);
+}
+
+/* Mode = Tertiary */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary,
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_transparent);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--hover,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_transparent--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--active,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_transparent--active);
+}
+
+/*
+  Buttons text colors
+*/
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button.Button--appearance-accent {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_accent_themed);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button.Button--appearance-positive {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_positive);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button.Button--appearance-negative {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_negative);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button.Button--appearance-neutral {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button.Button--appearance-accent-invariable {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_accent);
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-accent {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast_themed);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-negative,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-positive,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-accent-invariable {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-link.Button--hover {
+  opacity: 0.8;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-link.Button--active {
+  opacity: 0.7;
+}
+
+/*
+  Outline buttons borders
+*/
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-accent,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-accent.Button--hover,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-accent.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 1px var(--vkui--color_stroke_accent_themed);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-positive {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 1px var(--vkui--color_stroke_positive);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-positive.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 1px var(--vkui--color_stroke_positive--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-positive.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 1px var(--vkui--color_stroke_positive--active);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-negative {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 1px var(--vkui--color_stroke_negative);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-negative.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 1px var(--vkui--color_stroke_negative--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-negative.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 1px var(--vkui--color_stroke_negative--active);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-neutral {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 1px var(--vkui--color_field_border_alpha);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-neutral.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary--hover);
+  box-shadow: unset;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-neutral.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary--active);
+  box-shadow: unset;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-accent-invariable {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 1px var(--vkui--color_stroke_accent);
+}
+
+/*
+  Overlay colors section, separately
+  Background colors
+*/
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-overlay {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-overlay.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_contrast--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-overlay.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_contrast--active);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-secondary.Button--appearance-overlay {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_contrast_secondary_alpha);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-secondary.Button--appearance-overlay.Button--hover,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--appearance-overlay.Button--hover,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-overlay.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_contrast_secondary_alpha--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-secondary.Button--appearance-overlay.Button--active,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--appearance-overlay.Button--active,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-overlay.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_contrast_secondary_alpha--active);
+}
+
+/* Text colors */
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-overlay {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary_invariably);
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-overlay.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary_invariably--hover);
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-overlay.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary_invariably--active);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-secondary.Button--appearance-overlay,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--appearance-overlay,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-overlay,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-link.Button--appearance-overlay {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast);
+}
+
+/* Borders */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-overlay {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 1px var(--vkui--color_stroke_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-overlay.Button--hover {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 1px var(--vkui--color_stroke_contrast--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-overlay.Button--active {
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 1px var(--vkui--color_stroke_contrast--active);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button__before:not(:last-child) + .Button__content {
+  margin-left: 6px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button__after:not(:first-child) {
+  margin-left: 6px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-l .Button__before:not(:last-child) + .Button__content {
+  margin-left: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-l .Button__after:not(:first-child) {
+  margin-left: 8px;
+}
+
+/* Fonts sizes  */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-s .Button__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_subhead--font_size--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_subhead--line_height--compact);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--sizeY-regular.Button--size-s .Button__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_subhead--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_subhead--line_height--regular);
+}
+
+@media (--sizeY-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Button--sizeY-none.Button--size-s .Button__content {
+/* stylelint-disable-next-line custom-property-pattern */
+    font-size: var(--vkui--font_subhead--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+    line-height: var(--vkui--font_subhead--line_height--regular);
+  }
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-m .Button__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_headline2--font_size--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_headline2--line_height--compact);
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--sizeY-regular.Button--size-m .Button__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_headline2--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_headline2--line_height--regular);
+}
+
+@media (--sizeY-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Button--sizeY-none.Button--size-m .Button__content {
+/* stylelint-disable-next-line custom-property-pattern */
+    font-size: var(--vkui--font_headline2--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+    line-height: var(--vkui--font_headline2--line_height--regular);
+  }
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-l .Button__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_headline1--font_size--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_headline1--line_height--compact);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--sizeY-regular.Button--size-l.Button--android .Button__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_headline1--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_headline1--line_height--regular);
+}
+
+@media (--sizeY-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Button--sizeY-none.Button--size-l.Button--android .Button__content {
+/* stylelint-disable-next-line custom-property-pattern */
+    font-size: var(--vkui--font_headline1--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+    line-height: var(--vkui--font_headline1--line_height--regular);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--sizeY-regular.Button--size-l.Button--ios .Button__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_title3--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_title3--line_height--regular);
+}
+
+@media (--sizeY-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Button--sizeY-none.Button--size-l.Button--ios .Button__content {
+/* stylelint-disable-next-line custom-property-pattern */
+    font-size: var(--vkui--font_title3--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+    line-height: var(--vkui--font_title3--line_height--regular);
+  }
+}
+
+/* Sizes */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-m {
+/* stylelint-disable-next-line custom-property-pattern */
+  min-height: var(--vkui--size_button_medium_height--compact);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--sizeY-regular.Button--size-m {
+/* stylelint-disable-next-line custom-property-pattern */
+  min-height: var(--vkui--size_button_medium_height--regular);
+}
+
+@media (--sizeY-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Button--sizeY-none.Button--size-m {
+/* stylelint-disable-next-line custom-property-pattern */
+    min-height: var(--vkui--size_button_medium_height--regular);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-m.Button--singleIcon {
+/* stylelint-disable-next-line custom-property-pattern */
+  width: var(--vkui--size_button_medium_height--compact);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--sizeY-regular.Button--size-m.Button--singleIcon {
+/* stylelint-disable-next-line custom-property-pattern */
+  width: var(--vkui--size_button_medium_height--regular);
+}
+
+@media (--sizeY-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Button--sizeY-none.Button--size-m.Button--singleIcon {
+/* stylelint-disable-next-line custom-property-pattern */
+    width: var(--vkui--size_button_medium_height--regular);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-l {
+/* stylelint-disable-next-line custom-property-pattern */
+  min-height: var(--vkui--size_button_large_height--compact);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--sizeY-regular.Button--size-l {
+/* stylelint-disable-next-line custom-property-pattern */
+  min-height: var(--vkui--size_button_large_height--regular);
+}
+
+@media (--sizeY-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Button--sizeY-none.Button--size-l {
+/* stylelint-disable-next-line custom-property-pattern */
+    min-height: var(--vkui--size_button_large_height--regular);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--size-l.Button--singleIcon {
+/* stylelint-disable-next-line custom-property-pattern */
+  width: var(--vkui--size_button_large_height--compact);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--sizeY-regular.Button--size-l.Button--singleIcon {
+/* stylelint-disable-next-line custom-property-pattern */
+  width: var(--vkui--size_button_large_height--regular);
+}
+
+@media (--sizeY-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Button--sizeY-none.Button--size-l.Button--singleIcon {
+/* stylelint-disable-next-line custom-property-pattern */
+    width: var(--vkui--size_button_large_height--regular);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--sizeY-regular {
+/* stylelint-disable-next-line custom-property-pattern */
+  min-height: var(--vkui--size_button_small_height--regular);
+}
+
+@media (--sizeY-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+  .Button--sizeY-none {
+/* stylelint-disable-next-line custom-property-pattern */
+    min-height: var(--vkui--size_button_small_height--regular);
+  }
+}
+
+/**
+ * Impact:
+ * Counter
+ */
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-accent {
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_background: var(--vkui--color_background_content);
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_color: var(--vkui--color_text_accent_themed);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-secondary.Button--appearance-accent,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--appearance-accent,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-accent {
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_background: var(--vkui--color_background_accent_themed);
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_color: var(--vkui--color_text_contrast_themed);
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-positive {
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_background: var(--vkui--color_background_contrast);
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_color: var(--vkui--color_text_positive);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-secondary.Button--appearance-positive,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--appearance-positive,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-positive {
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_background: var(--vkui--color_background_positive);
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_color: var(--vkui--color_text_contrast);
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-negative {
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_background: var(--vkui--color_background_contrast);
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_color: var(--vkui--color_text_negative);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-secondary.Button--appearance-negative,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--appearance-negative,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-negative {
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_background: var(--vkui--color_background_negative);
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_color: var(--vkui--color_text_contrast);
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-neutral {
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_background: var(--vkui--color_background_content);
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_color: var(--vkui--color_text_primary_invariably);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-secondary.Button--appearance-neutral,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--appearance-neutral,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-neutral {
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_background: var(--vkui--color_background_accent);
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_color: var(--vkui--color_text_contrast);
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-primary.Button--appearance-overlay {
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_background: var(--vkui--color_icon_primary_invariably);
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_color: var(--vkui--color_text_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-secondary.Button--appearance-overlay,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-tertiary.Button--appearance-overlay,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Button--mode-outline.Button--appearance-overlay {
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_background: var(--vkui--color_background_contrast);
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--counter_inherit_color: var(--vkui--color_text_primary_invariably);
+}

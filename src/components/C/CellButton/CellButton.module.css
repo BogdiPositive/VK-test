@@ -1,0 +1,83 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.CellButton {
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  background: transparent;
+  text-align: left;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+/**
+ * CMP:
+ * FormItem
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormItem) .CellButton {
+  width: 100%;
+  box-sizing: content-box;
+/* stylelint-disable-next-line custom-property-pattern */
+  margin: 0 calc(-1 * var(--vkui--size_base_padding_horizontal--regular));
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CellButton[disabled] {
+  opacity: 0.4;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CellButton--centered {
+  justify-content: center;
+  text-align: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.CellButton--centered :global(.vkuiInternalSimpleCell__main) {
+  flex-grow: initial;
+  max-width: initial;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.CellButton--centered > :global(.vkuiIcon) {
+  padding-right: 8px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+.CellButton {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_accent);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.CellButton > :global(.vkuiIcon) {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_accent);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CellButton--mode-danger {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_negative);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.CellButton--mode-danger > :global(.vkuiIcon) {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_negative);
+}

@@ -1,0 +1,5 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Spacing {
+  position: relative;
+  box-sizing: border-box;
+}

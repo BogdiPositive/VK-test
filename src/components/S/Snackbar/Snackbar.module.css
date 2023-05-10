@@ -1,0 +1,214 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar {
+  user-select: none;
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui--z_index_popout);
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  width: 100%;
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui_internal--safe_area_inset_left);
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-right: var(--vkui_internal--safe_area_inset_right);
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-bottom: var(--vkui_internal--safe_area_inset_bottom);
+}
+
+/**
+ * CMP:
+ * Epic
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalEpic--hasTabbar) .Snackbar {
+  padding-bottom: calc(
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+    var(--vkui_internal--tabbar_height) + var(--vkui_internal--safe_area_inset_bottom)
+  );
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar__in,
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar__body {
+/* stylelint-disable-next-line custom-property-pattern */
+  transition: transform 320ms var(--vkui--animation_easing_platform);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar__in {
+  padding: 8px;
+/* stylelint-disable-next-line custom-property-pattern */
+  animation: vkui-animation-snackbar-intro-vertical 340ms var(--vkui--animation_easing_platform);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar--closing .Snackbar__in {
+  transform: translate3d(0, 140%, 0);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar__body {
+  box-sizing: border-box;
+  padding: 12px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_background_modal);
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: var(--vkui--elevation4);
+/* stylelint-disable-next-line custom-property-pattern */
+  border-radius: var(--vkui--size_border_radius--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar--mode-dark .Snackbar__body {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_background_contrast_inverse);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar__before {
+  margin-right: 12px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar__after {
+  margin-left: 12px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar__content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar--layout-vertical .Snackbar__content {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar__content-text {
+  flex: 1;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+  width: 100%;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar__content-subtitle {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_subhead);
+  margin-top: 2px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar--mode-dark .Snackbar__content-text {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar--layout-horizontal .Snackbar__action {
+  margin-left: 12px;
+  position: relative;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar--layout-vertical .Snackbar__action {
+  margin-top: 2px;
+  min-height: initial;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalRoot .Snackbar {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-bottom: var(--vkui_internal--safe_area_inset_bottom);
+}
+
+/* iOS */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar--ios .Snackbar__in,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar--ios .Snackbar__body {
+/* stylelint-disable-next-line custom-property-pattern */
+  transition: transform 400ms var(--vkui--animation_easing_platform);
+}
+
+/**
+ * Desktop
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar--desktop {
+  max-width: 351px;
+  left: 0;
+  bottom: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar--desktop .Snackbar__in {
+  padding: 12px;
+  animation-name: vkui-animation-snackbar-intro-horizontal;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar--desktop.Snackbar--closing .Snackbar__in {
+  transform: translate3d(-140%, 0, 0);
+}
+
+/**
+ * Touch-interaction
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Snackbar--touched .Snackbar__body {
+  transition: none;
+}
+
+/**
+ * Animations
+ */
+@keyframes vkui-animation-snackbar-intro-vertical {
+  from {
+    transform: translate3d(0, 140%, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes vkui-animation-snackbar-intro-horizontal {
+  from {
+    transform: translate3d(-140%, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}

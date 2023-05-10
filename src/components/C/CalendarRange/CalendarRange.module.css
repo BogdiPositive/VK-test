@@ -1,0 +1,33 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarRange {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 610px;
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_background_modal);
+/* stylelint-disable-next-line custom-property-pattern */
+  border: 0.5px solid var(--vkui--color_separator_primary);
+  box-sizing: border-box;
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: var(--vkui--elevation1);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarRange__inner {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarRange__inner:not(:last-child) {
+  margin-right: 24px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CalendarRange__header {
+  margin-bottom: 4px;
+}

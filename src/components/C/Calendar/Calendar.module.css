@@ -1,0 +1,40 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Calendar {
+  display: flex;
+  flex-direction: column;
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_background_modal);
+/* stylelint-disable-next-line custom-property-pattern */
+  border: 0.5px solid var(--vkui--color_separator_primary);
+  box-sizing: border-box;
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: var(--vkui--elevation1);
+  border-radius: 8px;
+  width: 305px;
+  padding: 12px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Calendar__time {
+/* stylelint-disable-next-line custom-property-pattern */
+  border-top: 1px solid var(--vkui--color_separator_primary);
+  margin: 12px -12px 0;
+  padding: 12px 12px 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Calendar__header {
+  margin-bottom: 4px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Calendar--size-s {
+  width: 220px;
+  padding: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Calendar--size-s .Calendar__header {
+  margin-bottom: 0;
+}

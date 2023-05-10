@@ -1,0 +1,41 @@
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Gradient--mode-tint.Gradient--to-top {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: linear-gradient(to bottom, var(--vkui--gradient_tint));
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Gradient--mode-tint.Gradient--to-bottom {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: linear-gradient(to top, var(--vkui--gradient_tint));
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Gradient--mode-white.Gradient--to-top {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: linear-gradient(to bottom, var(--vkui--gradient_white));
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Gradient--mode-white.Gradient--to-bottom {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: linear-gradient(to top, var(--vkui--gradient_white));
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Gradient--mode-black.Gradient--to-top {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: linear-gradient(to bottom, var(--vkui--gradient_black));
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Gradient--mode-black.Gradient--to-bottom {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: linear-gradient(to top, var(--vkui--gradient_black));
+}

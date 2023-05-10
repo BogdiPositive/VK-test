@@ -1,0 +1,105 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup {
+  display: inline-flex;
+  max-width: 100%; /* [Примечание 2] Чтобы блок не выходил за границы контейнера (связано с [Примечание 4]) */
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup--stretched {
+  display: flex;
+  width: 100%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup--mode-vertical {
+  flex-direction: column;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup--mode-horizontal {
+  flex-direction: row;
+}
+
+/* stylelint-disable vkui/atomic */
+
+/**
+ * [Примечание 3] Чтобы не завязываться на класс компонента, используем каскад и универсальный селектор.
+ */
+
+/* "gap" для mode="vertical" */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup--mode-vertical.ButtonGroup--gap-space > *:not(:first-child) {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: var(--vkui--size_button_group_gap_space--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup--mode-vertical.ButtonGroup--gap-s > *:not(:first-child) {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: var(--vkui--size_button_group_gap_small--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup--mode-vertical.ButtonGroup--gap-m > *:not(:first-child) {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: var(--vkui--size_button_group_gap_medium--regular);
+}
+
+/* "gap" для mode="horizontal" */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup--mode-horizontal > *:not(.ButtonGroup) {
+  /**
+   * [Примечание 4]
+   *
+   * `min-width` в контексте Flexbox по умолчанию имеет значение `auto`,
+   * из-за чего элементы при переполнении будут выходить за границы контейнера.
+   *
+   * Подробности по ссылке https://stackoverflow.com/a/66689926/2903061
+   */
+  min-width: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup--mode-horizontal.ButtonGroup--gap-space > *:not(:last-child) {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-right: var(--vkui--size_button_group_gap_space--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup--mode-horizontal.ButtonGroup--gap-s > *:not(:last-child) {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-right: var(--vkui--size_button_group_gap_small--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup--mode-horizontal.ButtonGroup--gap-m > *:not(:last-child) {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-right: var(--vkui--size_button_group_gap_medium--regular);
+}
+
+/* stylelint-enable vkui/atomic */
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup--align-left {
+  align-items: flex-start;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup--align-center {
+  align-items: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ButtonGroup--align-right {
+  align-items: flex-end;
+}

@@ -1,0 +1,90 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.CardGrid {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CardGrid--spaced {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding: var(--vkui--size_base_padding_vertical--regular)
+/* stylelint-disable-next-line custom-property-pattern */
+    var(--vkui--size_base_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.CardGrid--sizeX-compact {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_base_padding_horizontal--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-right: var(--vkui--size_base_padding_horizontal--regular);
+}
+
+@media (--sizeX-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+  .CardGrid--sizeX-none {
+/* stylelint-disable-next-line custom-property-pattern */
+    padding-left: var(--vkui--size_base_padding_horizontal--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+    padding-right: var(--vkui--size_base_padding_horizontal--regular);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.CardGrid + .CardGrid {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: calc(var(--vkui--size_cardgrid_padding_vertical--regular) * 2);
+}
+
+@media (--sizeX-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .CardGrid--sizeX-none.CardGrid--android {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+/**
+ * CMP:
+ * Group
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalGroup--mode-card) .CardGrid {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_base_padding_horizontal--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-right: var(--vkui--size_base_padding_horizontal--regular);
+}
+
+@media (--sizeX-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalGroup--mode-none) .CardGrid {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalGroup) .CardGrid:first-child {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: var(--vkui--size_cardgrid_padding_vertical--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalGroup) .CardGrid:last-child {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-bottom: var(--vkui--size_cardgrid_padding_vertical--regular);
+}

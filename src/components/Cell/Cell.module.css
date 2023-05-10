@@ -1,0 +1,86 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Cell {
+  position: relative;
+}
+
+/**
+ * CMP:
+ * List
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalList--dragging) .Cell:not(.Cell--dragging) {
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Cell--dragging {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary);
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: var(--vkui--elevation3);
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui_internal--z_index_cell_dragging);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Cell--selectable.Cell--disabled {
+/* stylelint-disable-next-line custom-property-pattern */
+  opacity: var(--vkui--opacity_disable_accessibility);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Cell__checkbox,
+/* stylelint-disable-next-line selector-class-pattern */
+.Cell__dragger {
+  position: relative;
+  flex-shrink: 0;
+  margin-right: 16px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Cell__content {
+  max-width: 100%;
+  min-width: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Cell--removable .Cell__content {
+  flex-grow: 1;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/**
+ * iOS
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Cell--ios .Cell__dragger {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Cell--ios .Cell__checkbox {
+  margin-right: 12px;
+}
+
+/**
+ * CMP:
+ * FormItem
+ */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormItem) > .Cell {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin: 0 calc(-1 * var(--vkui--size_base_padding_horizontal--regular));
+}

@@ -1,0 +1,54 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.SelectTypography--selectType-accent {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_paragraph--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_paragraph--line_height--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  font-weight: var(--vkui--font_weight_accent1);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+:not(.SelectTypography--selectType-accent).SelectTypography {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_headline1--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_headline1--line_height--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  font-weight: var(--vkui--font_weight_accent3);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SelectTypography--selectType-accent.SelectTypography--android {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-weight: var(--vkui--font_weight_accent2);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SelectTypography--vkcom:not(.SelectTypography--selectType-accent),
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SelectTypography--sizeY-compact:not(.SelectTypography--selectType-accent) {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_text--font_size--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_text--line_height--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+  font-weight: var(--vkui--font_weight_accent3);
+}
+
+@media (--sizeY-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .SelectTypography--sizeY-none:not(.SelectTypography--selectType-accent) {
+/* stylelint-disable-next-line custom-property-pattern */
+    font-size: var(--vkui--font_text--font_size--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+    line-height: var(--vkui--font_text--line_height--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+    font-weight: var(--vkui--font_weight_accent3);
+  }
+}

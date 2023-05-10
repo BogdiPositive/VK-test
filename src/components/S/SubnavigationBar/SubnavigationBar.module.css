@@ -1,0 +1,23 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.SubnavigationBar__in {
+  /* Отрицательный margin нужен, чтобы компенсировать увеличенный из-за тени padding (12px -> 20px) */
+  margin: -8px 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SubnavigationBar__scrollIn {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-top: calc(var(--vkui--size_subnavigation_bar_padding_vertical--regular) + 8px);
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-bottom: calc(var(--vkui--size_subnavigation_bar_padding_vertical--regular) + 8px);
+  display: flex;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SubnavigationBar__scrollIn::before,
+/* stylelint-disable-next-line selector-class-pattern */
+.SubnavigationBar__scrollIn::after {
+  content: '';
+/* stylelint-disable-next-line custom-property-pattern */
+  min-width: var(--vkui--size_base_padding_horizontal--regular);
+}

@@ -1,0 +1,68 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.SplitCol {
+  height: 100%;
+  width: 1px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  position: relative;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SplitCol--spaced {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin: 0 var(--vkui--size_split_col_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SplitCol--viewWidth-smallTabletPlus.SplitCol--spaced-none.SplitCol--spaced-auto {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin: 0 var(--vkui--size_split_col_padding_horizontal--regular);
+}
+
+@media (--viewWidth-smallTabletPlus) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .SplitCol--viewWidth-none.SplitCol--spaced-none.SplitCol--spaced-auto {
+/* stylelint-disable-next-line custom-property-pattern */
+    margin: 0 var(--vkui--size_split_col_padding_horizontal--regular);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SplitCol--viewWidth-tabletMinus.SplitCol--stretched-on-mobile {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+@media (--viewWidth-tabletMinus) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .SplitCol--viewWidth-none.SplitCol--stretched-on-mobile {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SplitCol--fixed {
+  height: 100%;
+  width: 1px;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SplitCol__fixedInner {
+  height: inherit;
+  width: inherit;
+  min-width: inherit;
+  max-width: inherit;
+  position: fixed;
+  transform: translateZ(0);
+  overflow: hidden;
+  top: 0;
+}

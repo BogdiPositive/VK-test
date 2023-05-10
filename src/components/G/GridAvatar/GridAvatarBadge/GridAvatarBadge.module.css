@@ -1,0 +1,11 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.GridAvatarBadge {
+  right: 0;
+  bottom: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.GridAvatarBadge--shifted {
+  right: -2px;
+  bottom: -2px;
+}

@@ -1,0 +1,34 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.DateInput__input {
+  flex-grow: 1;
+  margin-left: 10px;
+  margin-right: 14px;
+  font-size: 16px;
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui_internal--z_index_form_field_element);
+  cursor: text;
+  white-space: nowrap;
+  user-select: text;
+  font-variant-numeric: tabular-nums;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.DateInput__input--time-divider {
+  letter-spacing: 6px !important;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.DateInput--sizeY-compact .DateInput__input {
+  font-size: 15px;
+  margin-right: 22px;
+}
+
+@media (--sizeY-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .DateInput--sizeY-none .DateInput__input {
+    font-size: 15px;
+    margin-right: 22px;
+  }
+}

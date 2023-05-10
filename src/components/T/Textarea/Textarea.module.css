@@ -1,0 +1,76 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Textarea {
+  position: relative;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Textarea__el {
+  margin: 0;
+  width: 100%;
+  display: block;
+  box-sizing: border-box;
+  resize: none;
+  appearance: none;
+  font-family: inherit;
+/* stylelint-disable-next-line custom-property-pattern */
+  font-weight: var(--vkui--font_text--font_weight--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_text--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_text--line_height--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+  padding: 12px;
+  max-height: 204px;
+  border: none;
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui_internal--z_index_form_field_element);
+  position: relative;
+  background: transparent;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Textarea__el[cols] {
+  width: initial;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Textarea--sizeY-compact .Textarea__el {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_text--font_size--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_text--line_height--compact);
+  max-height: 196px;
+}
+
+@media (--sizeY-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Textarea--sizeY-none .Textarea__el {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 15px;
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Textarea__el::placeholder {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_secondary);
+/* stylelint-disable-next-line comment-empty-line-before */
+  /* Для Firefox */
+  opacity: 1;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Textarea__el:disabled {
+/* stylelint-disable-next-line custom-property-pattern */
+  opacity: var(--vkui--opacity_disable_accessibility);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Textarea__el:disabled::placeholder {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_secondary);
+}

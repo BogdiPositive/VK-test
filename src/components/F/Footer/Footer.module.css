@@ -1,0 +1,13 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Footer {
+  display: block;
+/* stylelint-disable-next-line comment-empty-line-before */
+  /* TODO [>=6]: переделать на padding */
+/* stylelint-disable-next-line custom-property-pattern */
+  margin: 24px var(--vkui--size_base_padding_horizontal--regular);
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_secondary);
+}

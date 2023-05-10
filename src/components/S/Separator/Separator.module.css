@@ -1,0 +1,67 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Separator {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_separator_primary);
+}
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media (min-resolution: 2dppx) {
+/* stylelint-disable-next-line selector-class-pattern */
+  .Separator {
+/* stylelint-disable-next-line custom-property-pattern */
+    color: var(--vkui--color_separator_primary2x);
+  }
+}
+
+/* stylelint-disable-next-line media-feature-range-notation */
+@media (min-resolution: 3dppx) {
+/* stylelint-disable-next-line selector-class-pattern */
+  .Separator {
+/* stylelint-disable-next-line custom-property-pattern */
+    color: var(--vkui--color_separator_primary3x);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Separator__in {
+/* stylelint-disable-next-line custom-property-pattern */
+  height: var(--vkui_internal--thin_border);
+  margin: 0;
+/* stylelint-disable-next-line value-keyword-case */
+  background: currentColor;
+  color: inherit;
+  border: none;
+  transform-origin: center top;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Separator--padded .Separator__in {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-left: var(--vkui--size_base_padding_horizontal--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-right: var(--vkui--size_base_padding_horizontal--regular);
+}
+
+/*
+ * CMP:
+ * ModalPage
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalModalPage--sizeX-regular) .Separator--padded {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+/* FIXME: Мертвый код */
+@media (--sizeX-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalModalPage--sizeX-none) .Separator--padded {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}

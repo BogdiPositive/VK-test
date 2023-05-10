@@ -1,0 +1,108 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell {
+  display: flex;
+/* stylelint-disable-next-line custom-property-pattern */
+  font-family: var(--vkui--font_family_base);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell__image {
+  display: flex;
+  justify-content: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell__body {
+  text-decoration: none;
+  font-family: inherit;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+  word-break: break-all;
+  text-overflow: ellipsis;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell__subtitle {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_secondary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell__content .HorizontalCell__subtitle {
+  margin-top: 2px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell--size-s {
+  max-width: 80px;
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell__image {
+  padding: 4px 6px;
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell__content {
+  padding: 2px 6px 8px;
+  text-align: left;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell--size-s .HorizontalCell__image {
+  padding: 4px 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell--size-s .HorizontalCell__content {
+  padding: 2px 4px 8px;
+  text-align: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell--size-m {
+  width: 100px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell--size-l {
+  width: auto;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell:first-child::before,
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell:last-child::after {
+  content: '';
+  min-width: 10px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell--size-s:first-child::before,
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell--size-s:last-child::after {
+  min-width: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell--size-s:first-child,
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell--size-s:last-child {
+  max-width: 88px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell--size-m:first-child,
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalCell--size-m:last-child {
+  width: 110px;
+}

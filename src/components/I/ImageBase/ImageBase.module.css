@@ -1,0 +1,204 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.ImageBase {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-sizing: border-box;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_secondary);
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary);
+  background-size: cover;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ImageBase--withBorder {
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 var(--vkui_internal--thin_border) var(--vkui--color_image_border_alpha);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ImageBase__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: inherit;
+  object-fit: cover;
+  visibility: hidden;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ImageBase--loaded .ImageBase__img {
+  visibility: visible;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ImageBase__fallback {
+  position: absolute;
+
+  /* Расчитываем на ценитрирование через родительский `display: flex` */
+  top: auto;
+  left: auto;
+}
+
+/**
+ * CMP:
+ * CellButton
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalCellButton) > .ImageBase :global(.vkuiIcon) {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_accent);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalCellButton--mode-danger) > .ImageBase :global(.vkuiIcon) {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_negative);
+}
+
+/**
+ * CMP:
+ * PanelHeader
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalPanelHeader__before) .ImageBase {
+  margin-left: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalPanelHeader__after) .ImageBase {
+  margin-right: 8px;
+}
+
+/**
+ * CMP:
+ * SimpleCell
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalSimpleCell) > .ImageBase {
+  margin-right: 12px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalSimpleCell) > .ImageBase--size-28,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+:global(.vkuiInternalSimpleCell) > .ImageBase--size-32 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalSimpleCell) > .ImageBase--size-40 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalSimpleCell) > .ImageBase--size-48,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+:global(.vkuiInternalSimpleCell) > .ImageBase--size-72 {
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalSimpleCell--ios) > .ImageBase--size-28,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+:global(.vkuiInternalSimpleCell--ios) > .ImageBase--size-32 {
+  margin-left: 4px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalSimpleCell--sizeY-compact) > .ImageBase--size-28,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+:global(.vkuiInternalSimpleCell--sizeY-compact) > .ImageBase--size-32 {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalSimpleCell--sizeY-compact) > .ImageBase--size-40 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalSimpleCell--sizeY-compact) > .ImageBase--size-48 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+@media (--sizeY-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalSimpleCell--sizeY-none) > .ImageBase--size-28,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  :global(.vkuiInternalSimpleCell--sizeY-none) > .ImageBase--size-32 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalSimpleCell--sizeY-none) > .ImageBase--size-40 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalSimpleCell--sizeY-none) > .ImageBase--size-48 {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
+}

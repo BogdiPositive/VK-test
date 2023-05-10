@@ -1,0 +1,51 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalDismissButton {
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  right: -56px;
+  width: 56px;
+  height: 56px;
+  padding: 18px;
+  box-sizing: border-box;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_contrast);
+  transition: opacity 0.15s ease-out;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalDismissButton::before {
+  display: block;
+  content: '';
+  top: 14px;
+  right: 14px;
+  bottom: 14px;
+/* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  left: 14px;
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_overlay_primary);
+  border-radius: 50%;
+  position: absolute;
+}
+
+/* fixes icon misplacement on Safari in some cases */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.ModalDismissButton :global(.vkuiIcon) {
+  transform: translateX(0);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalDismissButton--hover.ModalDismissButton::before {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_overlay_primary--hover);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalDismissButton--active.ModalDismissButton::before {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_overlay_primary--active);
+}

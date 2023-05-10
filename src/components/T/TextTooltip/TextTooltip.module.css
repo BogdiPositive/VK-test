@@ -1,0 +1,89 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.TextTooltip {
+/* stylelint-disable-next-line custom-property-pattern */
+  border-radius: var(--vkui--size_border_radius--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_modal);
+  padding: 8px 12px 9px;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: var(--vkui--elevation3);
+  animation: vkui-texttooltip-fadein 0.2s ease;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.TextTooltip__arrow {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_background_modal);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.TextTooltip--appearance-accent {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_accent_tint);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.TextTooltip--appearance-accent .TextTooltip__arrow {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_background_accent_tint);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.TextTooltip--appearance-white {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_contrast);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary_invariably);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.TextTooltip--appearance-white .TextTooltip__arrow {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_background_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.TextTooltip--appearance-black {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_contrast_inverse);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.TextTooltip--appearance-black .TextTooltip__arrow {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_background_contrast_inverse);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.TextTooltip--appearance-inversion {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_modal_inverse);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast_themed);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.TextTooltip--appearance-inversion .TextTooltip__arrow {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_background_modal_inverse);
+}
+
+@keyframes vkui-texttooltip-fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

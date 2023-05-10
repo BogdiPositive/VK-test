@@ -1,0 +1,353 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  white-space: nowrap;
+  text-decoration: none;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-left: var(--vkui--size_base_padding_horizontal--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-right: var(--vkui--size_base_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--mult {
+  white-space: normal;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--mult .SimpleCell__children {
+  text-overflow: initial;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell__main {
+  max-width: 100%;
+  flex-grow: 1;
+  min-width: 0;
+  overflow: hidden;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.SimpleCell > :global(.vkuiIcon) {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 12px;
+  flex-shrink: 0;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_accent);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.SimpleCell > :global(.vkuiIcon--28) {
+  padding-right: 16px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell__subhead {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_subhead);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell__text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell__subtitle,
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell__extraSubtitle {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_secondary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell .SimpleCell__content {
+  display: flex;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell:not(.SimpleCell--mult) .SimpleCell__content {
+  justify-content: flex-start;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell__children {
+  color: inherit;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: block;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--mult .SimpleCell__children,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--mult .SimpleCell__subtitle {
+  flex: 1 1 auto;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell__badge {
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_accent);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell__content > *:not(:last-child) {
+  margin-right: 4px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell__indicator {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_secondary);
+  min-width: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  padding-left: 4px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell__after {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_accent);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.SimpleCell__after > :global(.vkuiIcon) {
+  padding-left: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.SimpleCell__after > :global(.vkuiIcon):last-child {
+  padding-right: 2px;
+}
+
+/**
+ * iOS
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--ios .SimpleCell__main,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--ios .SimpleCell__indicator {
+  padding-top: 9px;
+  padding-bottom: 11px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.SimpleCell--ios > :global(.vkuiIcon--28) {
+  padding-left: 4px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.SimpleCell--ios .SimpleCell__after :global(.vkuiIcon--chevron_24) {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_tertiary);
+  padding-right: 4px;
+  padding-left: 12px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--sizeY-regular.SimpleCell--ios
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  > .Avatar:not(.Avatar--size-32)
+/* stylelint-disable-next-line selector-class-pattern */
+  ~ .SimpleCell__main
+/* stylelint-disable-next-line selector-class-pattern */
+  .SimpleCell__children,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--sizeY-regular.SimpleCell--ios
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  > .Avatar:not(.Avatar--size-32)
+/* stylelint-disable-next-line selector-class-pattern */
+  ~ .SimpleCell__indicator {
+  font-size: 16px;
+  line-height: 20px;
+}
+
+@media (--sizeY-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .SimpleCell--sizeY-none.SimpleCell--ios
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+    > .Avatar:not(.Avatar--size-32)
+/* stylelint-disable-next-line selector-class-pattern */
+    ~ .SimpleCell__main
+/* stylelint-disable-next-line selector-class-pattern */
+    .SimpleCell__children,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .SimpleCell--sizeY-none.SimpleCell--ios > .Avatar:not(.Avatar--size-32) ~ .SimpleCell__indicator {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+/**
+ * Android & VKCOM
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--android .SimpleCell__main,
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--android .SimpleCell__indicator,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--vkcom .SimpleCell__main,
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--vkcom .SimpleCell__indicator {
+  padding-top: 11px;
+  padding-bottom: 10px;
+}
+
+/**
+ * sizeY === 'compact'
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--sizeY-compact {
+  min-height: 44px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--sizeY-compact .SimpleCell__main,
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--sizeY-compact .SimpleCell__indicator {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--sizeY-compact .SimpleCell__description,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--sizeY-compact > .Avatar--size-32 ~ .SimpleCell__main .SimpleCell__description,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--sizeY-compact > .Avatar--size-28 ~ .SimpleCell__main .SimpleCell__description {
+  margin-top: 1px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell--sizeY-compact .SimpleCell__badge .Badge {
+  transform: translateY(0.5px);
+}
+
+@media (--sizeY-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+  .SimpleCell--sizeY-none {
+    min-height: 44px;
+  }
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .SimpleCell--sizeY-none .SimpleCell__main,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .SimpleCell--sizeY-none .SimpleCell__indicator {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .SimpleCell--sizeY-none .SimpleCell__description,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .SimpleCell--sizeY-none > .Avatar--size-32 ~ .SimpleCell__main .SimpleCell__description,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .SimpleCell--sizeY-none > .Avatar--size-28 ~ .SimpleCell__main .SimpleCell__description {
+    margin-top: 1px;
+  }
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .SimpleCell--sizeY-none .SimpleCell__badge .Badge {
+    transform: translateY(0.5px);
+  }
+}
+
+/**
+ * CMP:
+ * FormItem
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormItem) > .SimpleCell {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin: 0 calc(-1 * var(--vkui--size_base_padding_horizontal--regular));
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SimpleCell__main > *:not(:first-child) {
+  margin-top: 2px;
+}

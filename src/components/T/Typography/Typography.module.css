@@ -1,0 +1,30 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Typography--normalize {
+  margin: 0;
+  display: block;
+}
+
+/* Мы утяжеляем селектор, чтобы перебить другие селекторы */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Typography--weight-1.Typography--weight-1.Typography--weight-1 {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-weight: var(--vkui--font_weight_accent1);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Typography--weight-2.Typography--weight-2.Typography--weight-2 {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-weight: var(--vkui--font_weight_accent2);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Typography--weight-3.Typography--weight-3.Typography--weight-3 {
+/* stylelint-disable-next-line custom-property-pattern */
+  font-weight: var(--vkui--font_weight_accent3);
+}

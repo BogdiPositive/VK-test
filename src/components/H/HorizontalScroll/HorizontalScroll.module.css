@@ -1,0 +1,83 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalScroll {
+  position: relative;
+
+  /**
+   * ⚠️ WARNING ⚠️
+   * `overflow-y` мы не трогаем, т.к. из-за `hidden` могут обрезаться тени у потомков.
+   */
+  overflow-x: hidden;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalScroll__in {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  /**
+   * Для удаление скролла в Firefox.
+   * В версии ниже 64 будет виден скролл, но это не ломает функциональность.
+   */
+  scrollbar-width: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalScroll__in::-webkit-scrollbar {
+  display: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalScroll__in-wrapper {
+  transition: transform 0.2s;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalScroll__arrowLeft:hover ~ .HorizontalScroll__in .HorizontalScroll__in-wrapper {
+  transform: translateX(8px);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.HorizontalScroll__arrowRight:hover ~ .HorizontalScroll__in .HorizontalScroll__in-wrapper {
+  transform: translateX(-8px);
+}
+
+/**
+ * CMP:
+ * Tabs
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalTabs) .HorizontalScroll {
+  min-width: 100%;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalTabs) .HorizontalScroll__in-wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalTabs--withGaps) .HorizontalScroll__in-wrapper::after,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+:global(.vkuiInternalTabs--withGaps) .HorizontalScroll__in-wrapper::before {
+  display: block;
+/* stylelint-disable-next-line custom-property-pattern */
+  width: var(--vkui--size_base_padding_horizontal--regular);
+  flex-shrink: 0;
+  height: 1px;
+  content: '';
+}

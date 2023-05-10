@@ -1,0 +1,298 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  content: '';
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel__in {
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel__centered {
+  display: flex;
+  flex: 1 0;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.Panel__centered :global(.vkuiInternalPanelHeader--vis) + * {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: var(--vkui--size_panel_header_height--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.Panel__centered :global(.vkuiInternalPanelHeader--ios):global(.vkuiInternalPanelHeader--vis) + * {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: var(--vkui--size_panel_header_height--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.Panel--sizeX-compact .Panel__centered :global(.vkuiInternalPanelHeader--sep) + * {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: calc(var(--vkui--size_panel_header_height--regular) + 5px);
+}
+
+@media (--sizeX-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  .Panel--sizeX-none .Panel__centered :global(.vkuiInternalPanelHeader--sep) + * {
+/* stylelint-disable-next-line custom-property-pattern */
+    margin-top: calc(var(--vkui--size_panel_header_height--regular) + 5px);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel--sizeX-compact
+/* stylelint-disable-next-line selector-class-pattern */
+  .Panel__centered
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalPanelHeader--ios):global(.vkuiInternalPanelHeader--sep)
+  + * {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: calc(var(--vkui--size_panel_header_height--regular) + 5px);
+}
+
+@media (--sizeX-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+  .Panel--sizeX-none
+/* stylelint-disable-next-line selector-class-pattern */
+    .Panel__centered
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+    :global(.vkuiInternalPanelHeader--ios):global(.vkuiInternalPanelHeader--sep)
+    + * {
+/* stylelint-disable-next-line custom-property-pattern */
+    margin-top: calc(var(--vkui--size_panel_header_height--regular) + 5px);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel--sizeX-compact
+/* stylelint-disable-next-line selector-class-pattern */
+  .Panel__centered
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalPanelHeader--vkcom):global(.vkuiInternalPanelHeader--sep)
+  + * {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: calc(var(--vkui--size_panel_header_height--regular) + 5px);
+}
+
+@media (--sizeX-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+  .Panel--sizeX-none
+/* stylelint-disable-next-line selector-class-pattern */
+    .Panel__centered
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+    :global(.vkuiInternalPanelHeader--vkcom):global(.vkuiInternalPanelHeader--sep)
+    + * {
+/* stylelint-disable-next-line custom-property-pattern */
+    margin-top: calc(var(--vkui--size_panel_header_height--regular) + 5px);
+  }
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.Panel--sizeX-regular .Panel__centered :global(.vkuiInternalPanelHeader--sep) + * {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: calc(var(--vkui--size_panel_header_height--regular) + 16px);
+}
+
+@media (--sizeX-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  .Panel--sizeX-none .Panel__centered :global(.vkuiInternalPanelHeader--sep) + * {
+/* stylelint-disable-next-line custom-property-pattern */
+    margin-top: calc(var(--vkui--size_panel_header_height--regular) + 16px);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel--sizeX-regular
+/* stylelint-disable-next-line selector-class-pattern */
+  .Panel__centered
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalPanelHeader--ios):global(.vkuiInternalPanelHeader--sep)
+  + * {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: calc(var(--vkui--size_panel_header_height--regular) + 16px);
+}
+
+@media (--sizeX-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+  .Panel--sizeX-none
+/* stylelint-disable-next-line selector-class-pattern */
+    .Panel__centered
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+    :global(.vkuiInternalPanelHeader--ios):global(.vkuiInternalPanelHeader--sep)
+    + * {
+/* stylelint-disable-next-line custom-property-pattern */
+    margin-top: calc(var(--vkui--size_panel_header_height--regular) + 16px);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel--sizeX-regular
+/* stylelint-disable-next-line selector-class-pattern */
+  .Panel__centered
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalPanelHeader--vkcom):global(.vkuiInternalPanelHeader--sep)
+  + * {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: calc(var(--vkui--size_panel_header_height--regular) + 16px);
+}
+
+@media (--sizeX-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+  .Panel--sizeX-none
+/* stylelint-disable-next-line selector-class-pattern */
+    .Panel__centered
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+    :global(.vkuiInternalPanelHeader--vkcom):global(.vkuiInternalPanelHeader--sep)
+    + * {
+/* stylelint-disable-next-line custom-property-pattern */
+    margin-top: calc(var(--vkui--size_panel_header_height--regular) + 16px);
+  }
+}
+
+/**
+ * CMP:
+ * View
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalView--ios) .Panel__in {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-bottom: var(--vkui_internal--safe_area_inset_bottom);
+}
+
+/* stylelint-disable-next-line no-duplicate-selectors */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalView--ios) .Panel__in {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding: 0 var(--vkui_internal--safe_area_inset_right)
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+    var(--vkui_internal--safe_area_inset_bottom) var(--vkui_internal--safe_area_inset_left);
+}
+
+/**
+ * CMP:
+ * Epic
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalEpic--hasTabbar) .Panel__in {
+/* stylelint-disable-next-line custom-property-pattern */
+  padding-bottom: var(--vkui_internal--tabbar_height);
+  padding-bottom: calc(
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+    var(--vkui_internal--safe_area_inset_bottom) + var(--vkui_internal--tabbar_height)
+  );
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel__in-before {
+  height: 1px;
+  margin-bottom: -1px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel__in-after {
+  height: 1px;
+  margin-top: -1px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel .Panel__in,
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel::before {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_content);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel.Panel--sizeX-regular .Panel__in,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Panel.Panel--sizeX-regular::before {
+  background-color: transparent;
+}
+
+@media (--sizeX-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Panel--sizeX-none .Panel__in,
+/* stylelint-disable-next-line selector-class-pattern */
+  .Panel--sizeX-none::before {
+    background-color: transparent;
+  }
+}

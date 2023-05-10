@@ -1,0 +1,161 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.FormItem {
+  display: block;
+/* stylelint-disable-next-line custom-property-pattern */
+  padding: var(--vkui--size_form_item_padding_vertical--regular)
+/* stylelint-disable-next-line custom-property-pattern */
+    var(--vkui--size_base_padding_horizontal--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.FormItem--removable {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.FormItem__removable {
+  max-width: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+/* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  flex-basis: 0;
+  padding: 0;
+  min-width: 1px;
+  overflow: hidden;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.FormItem__top {
+  padding-top: 2px;
+  padding-bottom: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_subhead);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.FormItem__bottom {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_secondary);
+  padding-top: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.FormItem--status-error .FormItem__bottom {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_negative);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.FormItem--status-valid .FormItem__bottom,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.FormItem--verified .FormItem__bottom {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_positive);
+}
+
+/**
+ * sizeY COMPACT
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.FormItem--sizeY-compact .FormItem__top {
+  padding-bottom: 6px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.FormItem--sizeY-compact .FormItem__bottom {
+  padding-top: 6px;
+}
+
+@media (--sizeY-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .FormItem--sizeY-none .FormItem__top {
+    padding-bottom: 6px;
+  }
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .FormItem--sizeY-none .FormItem__bottom {
+    padding-top: 6px;
+  }
+}
+
+/**
+ * CMP:
+ * FormLayoutGroup
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormLayoutGroup--mode-horizontal) .FormItem {
+  max-width: 100%;
+  flex-grow: 1;
+  flex-shrink: 0;
+/* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  flex-basis: 0;
+  padding: 0;
+  min-width: 1px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormLayoutGroup--mode-horizontal):not(
+/* stylelint-disable-next-line selector-class-pattern */
+    :global(.vkuiInternalFormLayoutGroup--segmented)
+  )
+/* stylelint-disable-next-line selector-class-pattern */
+  .FormItem
+/* stylelint-disable-next-line selector-class-pattern */
+  + .FormItem {
+  margin-left: 24px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.FormItem--withTop .FormItem__removable,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormLayoutGroup--mode-horizontal) .FormItem--withTop {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: calc(-2px - var(--vkui--font_subhead--line_height--regular) - 8px);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.FormItem--sizeY-compact.FormItem--withTop .FormItem__removable,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormLayoutGroup--mode-horizontal) .FormItem--sizeY-compact.FormItem--withTop {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-top: calc(-2px - var(--vkui--font_subhead--line_height--compact) - 6px);
+}
+
+@media (--sizeY-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .FormItem--sizeY-none.FormItem--withTop .FormItem__removable,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalFormLayoutGroup--mode-horizontal) .FormItem--sizeY-none.FormItem--withTop {
+/* stylelint-disable-next-line custom-property-pattern */
+    margin-top: calc(-2px - var(--vkui--font_subhead--line_height--compact) - 6px);
+  }
+}

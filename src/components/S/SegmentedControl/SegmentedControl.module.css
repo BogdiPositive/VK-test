@@ -1,0 +1,83 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.SegmentedControl {
+  height: 30px;
+  padding: 2px;
+/* stylelint-disable-next-line custom-property-pattern */
+  border-radius: var(--vkui--size_border_radius--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_secondary);
+  box-sizing: border-box;
+/* stylelint-disable-next-line custom-property-pattern */
+  font-family: var(--vkui--font_family_base);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SegmentedControl--size-l {
+  height: 36px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SegmentedControl__in {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: all 100ms ease-out;
+  border-radius: inherit;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SegmentedControl__slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_segmented_control);
+  transition: transform 150ms;
+  transform-origin: 0 0;
+  border-radius: inherit;
+/* stylelint-disable-next-line alpha-value-notation */
+/* stylelint-disable-next-line color-function-notation */
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: inset 0 0 0 0.5px var(--vkui--color_image_border_alpha), 0 3px 8px rgba(0, 0, 0, 0.12),
+/* stylelint-disable-next-line alpha-value-notation */
+/* stylelint-disable-next-line color-function-notation */
+    0 3px 1px rgba(0, 0, 0, 0.04);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.SegmentedControl__option {
+  position: relative;
+  flex: 1;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * sizeY REGULAR
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+.SegmentedControl--sizeY-regular {
+  height: 36px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.SegmentedControl--sizeY-regular.SegmentedControl--size-l {
+  height: 44px;
+}
+
+@media (--sizeY-regular) {
+/* stylelint-disable-next-line selector-class-pattern */
+  .SegmentedControl--sizeY-none {
+    height: 36px;
+  }
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .SegmentedControl--sizeY-none.SegmentedControl--size-l {
+    height: 44px;
+  }
+}

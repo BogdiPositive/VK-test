@@ -1,0 +1,17 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.InfoRow {
+  user-select: text;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.InfoRow__header {
+  display: block;
+  margin-bottom: 2px;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_subhead);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

@@ -1,0 +1,23 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.AppRoot {
+  height: 100%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.AppRoot--pointer-has-not {
+  user-select: none;
+}
+
+@media (--pointer-has-not) {
+/* stylelint-disable-next-line selector-class-pattern */
+  .AppRoot--pointer-none {
+    user-select: none;
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkui__root--embedded) .AppRoot {
+  overflow: auto;
+}

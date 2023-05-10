@@ -1,0 +1,37 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Popover {
+  position: relative;
+  animation: vkui-popover-fadein 0.2s ease;
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_background_modal);
+/* stylelint-disable-next-line custom-property-pattern */
+  border-radius: var(--vkui--size_border_radius--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: var(--vkui--elevation3);
+}
+
+/* Создаём "Safe Zone" */
+/* stylelint-disable-next-line selector-class-pattern */
+.Popover::before {
+  content: '';
+  position: absolute;
+/* stylelint-disable-next-line custom-property-pattern */
+  top: calc(-1 * var(--vkui_internal--popover_safe_zone_padding));
+/* stylelint-disable-next-line custom-property-pattern */
+  right: calc(-1 * var(--vkui_internal--popover_safe_zone_padding));
+/* stylelint-disable-next-line custom-property-pattern */
+  bottom: calc(-1 * var(--vkui_internal--popover_safe_zone_padding));
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  left: calc(-1 * var(--vkui_internal--popover_safe_zone_padding));
+}
+
+@keyframes vkui-popover-fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

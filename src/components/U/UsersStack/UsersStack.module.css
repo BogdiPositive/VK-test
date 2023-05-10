@@ -1,0 +1,104 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack {
+  display: flex;
+  align-items: center;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_secondary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack--direction-row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack--direction-column {
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack__photos {
+  display: flex;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack__fill {
+/* stylelint-disable-next-line custom-property-pattern */
+  fill: var(--vkui--color_image_placeholder_alpha);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack__photo--others {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast_themed);
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_icon_secondary);
+  border-radius: 50%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack--size-s .UsersStack__photo {
+  width: 16px;
+  height: 16px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack--size-m .UsersStack__photo {
+  width: 24px;
+  height: 24px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack--size-l .UsersStack__photo {
+  width: 32px;
+  height: 32px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack__photo + .UsersStack__photo {
+  margin-left: -2px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack__text {
+  min-width: 0;
+  flex: 1;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack--direction-column .UsersStack__text {
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack--direction-row .UsersStack__text {
+  margin-left: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.UsersStack--direction-row-reverse .UsersStack__text {
+  margin-right: 8px;
+}
+
+/**
+ * CMP:
+ * ModalCardBase
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalModalCardBase) .UsersStack {
+  margin-top: 20px;
+}

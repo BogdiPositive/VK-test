@@ -1,0 +1,262 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.IconButton {
+  appearance: none;
+  background: none;
+  border: none;
+  box-shadow: none;
+  display: block;
+/* stylelint-disable-next-line value-keyword-case */
+  color: currentColor;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  height: 48px;
+
+  /**
+   * Чтобы закргуление было равно половине высоты.
+   * см. https://stackoverflow.com/questions/27233295/possible-to-make-border-radius-equal-to-half-the-total-height-without-javascript
+   */
+  border-radius: 9999px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.IconButton--sizeY-compact {
+  height: 44px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.IconButton[disabled] {
+/* stylelint-disable-next-line custom-property-pattern */
+  opacity: var(--vkui--opacity_disable_accessibility);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.IconButton--ios {
+/* stylelint-disable-next-line custom-property-pattern */
+  border-radius: var(--vkui--size_border_radius--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.IconButton :global(.vkuiIcon--16) {
+  padding: 16px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.IconButton :global(.vkuiIcon--16.vkuiIcon--w-8) {
+  padding: 16px 14px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.IconButton--sizeY-compact :global(.vkuiIcon--16),
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.IconButton--sizeY-compact :global(.vkuiIcon--16.vkuiIcon--w-8) {
+  padding: 14px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.IconButton :global(.vkuiIcon--24) {
+  padding: 12px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.IconButton--sizeY-compact :global(.vkuiIcon--24) {
+  padding: 10px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.IconButton :global(.vkuiIcon--28) {
+  padding: 10px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+.IconButton--sizeY-compact :global(.vkuiIcon--28) {
+  padding: 8px;
+}
+
+@media (--sizeY-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+  .IconButton--sizeY-none {
+    height: 44px;
+  }
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  .IconButton--sizeY-none :global(.vkuiIcon--16),
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .IconButton--sizeY-none :global(.vkuiIcon--16.vkuiIcon--w-8) {
+    padding: 14px;
+  }
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  .IconButton--sizeY-none :global(.vkuiIcon--24) {
+    padding: 10px;
+  }
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  .IconButton--sizeY-none :global(.vkuiIcon--28) {
+    padding: 8px;
+  }
+}
+
+/**
+ * CMP:
+ * - FormItem
+ * - FormLayoutGroup
+ * - FormField
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormItem--removable) :global(.vkuiInternalRemovable__content) > .IconButton,
+/* stylelint-disable-next-line selector-class-pattern */
+:global(.vkuiInternalFormLayoutGroup--removable)
+/* stylelint-disable-next-line selector-class-pattern */
+  :global(.vkuiInternalRemovable__content)
+/* stylelint-disable-next-line selector-class-pattern */
+  > .IconButton,
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+:global(.vkuiInternalFormField__after) .IconButton {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+/* stylelint-disable-next-line custom-property-pattern */
+  width: var(--vkui--size_field_height--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  height: var(--vkui--size_field_height--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  border-radius: var(--vkui--size_border_radius--regular);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormField__after)
+/* stylelint-disable-next-line selector-class-pattern */
+  .IconButton
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  :global(.vkuiIcon):global(.vkuiIcon):global(.vkuiIcon) {
+  padding: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormField__after) .IconButton--sizeY-compact {
+/* stylelint-disable-next-line custom-property-pattern */
+  width: var(--vkui--size_field_height--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+  height: var(--vkui--size_field_height--compact);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFormItem--removable)
+/* stylelint-disable-next-line selector-class-pattern */
+  :global(.vkuiInternalRemovable__content)
+/* stylelint-disable-next-line selector-class-pattern */
+  > .IconButton--sizeY-compact,
+/* stylelint-disable-next-line selector-class-pattern */
+:global(.vkuiInternalFormLayoutGroup--removable)
+/* stylelint-disable-next-line selector-class-pattern */
+  :global(.vkuiInternalRemovable__content)
+/* stylelint-disable-next-line selector-class-pattern */
+  > .IconButton--sizeY-compact {
+/* stylelint-disable-next-line custom-property-pattern */
+  height: var(--vkui--size_field_height--compact);
+}
+
+@media (--sizeY-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalFormField__after) .IconButton--sizeY-none {
+/* stylelint-disable-next-line custom-property-pattern */
+    width: var(--vkui--size_field_height--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+    height: var(--vkui--size_field_height--compact);
+  }
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+  :global(.vkuiInternalFormItem--removable)
+/* stylelint-disable-next-line selector-class-pattern */
+    :global(.vkuiInternalRemovable__content)
+/* stylelint-disable-next-line selector-class-pattern */
+    > .IconButton--sizeY-none,
+/* stylelint-disable-next-line selector-class-pattern */
+  :global(.vkuiInternalFormLayoutGroup--removable)
+/* stylelint-disable-next-line selector-class-pattern */
+    :global(.vkuiInternalRemovable__content)
+/* stylelint-disable-next-line selector-class-pattern */
+    > .IconButton--sizeY-none {
+/* stylelint-disable-next-line custom-property-pattern */
+    height: var(--vkui--size_field_height--compact);
+  }
+}
+
+/**
+ * CMP:
+ * SimpleCell
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalSimpleCell__after) .IconButton:last-child {
+  margin-right: -12px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalSimpleCell--ios)
+/* stylelint-disable-next-line selector-class-pattern */
+  :global(.vkuiInternalSimpleCell__after)
+/* stylelint-disable-next-line selector-class-pattern */
+  .IconButton:last-child {
+  margin-right: -9px;
+}

@@ -1,0 +1,136 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase__container {
+  box-sizing: border-box;
+  position: relative;
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_background_modal);
+  border-radius: 18px;
+  padding: 16px;
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-bottom: var(--vkui_internal--safe_area_inset_bottom);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: initial;
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: var(--vkui--elevation3);
+
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  --vkui_internal--background: var(--vkui--color_background_modal);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase__container--softwareKeyboardOpened {
+  margin-bottom: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase__header,
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase__subheader {
+  text-align: center;
+  margin: 0;
+  padding: 0 8px;
+  word-break: break-word;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase__header {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase__subheader {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_subhead);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase__header + .ModalCardBase__subheader {
+  margin-top: 8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase__icon {
+  margin: 8px auto 16px;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_accent);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase__actions {
+  display: flex;
+  margin-top: 16px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalUsersStack) + .ModalCardBase__actions {
+  margin-top: 24px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase__header + .ModalCardBase__actions,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase__subheader + .ModalCardBase__actions {
+  margin-top: 32px;
+}
+
+/**
+ * iOS
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase__dismiss {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  width: 48px;
+  height: 48px;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_icon_secondary);
+  justify-content: center;
+}
+
+/**
+ * iOS
+ */
+/* stylelint-disable-next-line comment-empty-line-before */
+/*
+ * TODO [>=6]: зачем этот стиль? Удалить?
+*/
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase--ios .ModalCardBase__header:first-child {
+  padding-left: 36px;
+  padding-right: 36px;
+}
+
+/**
+ * Android + vkcom
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase--android .ModalCardBase__container,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase--vkcom .ModalCardBase__container {
+  border-radius: 12px;
+}
+
+/**
+ * Desktop
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ModalCardBase--desktop .ModalCardBase__container {
+  border-radius: 8px;
+}

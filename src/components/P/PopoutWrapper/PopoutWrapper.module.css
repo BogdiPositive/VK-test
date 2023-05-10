@@ -1,0 +1,126 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper--opened {
+  pointer-events: initial;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper--closing {
+  pointer-events: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper--fixed {
+  position: fixed;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+/* stylelint-disable-next-line custom-property-pattern */
+  animation: vkui-animation-full-fade-in var(--vkui--animation_duration_m) ease;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper--closing .PopoutWrapper__overlay {
+  opacity: 0;
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  transition: opacity var(--vkui--animation_duration_m) var(--vkui--animation_easing_default);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper--masked .PopoutWrapper__overlay {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_overlay_primary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper--fixed .PopoutWrapper__overlay {
+  position: absolute;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper__container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper__content {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  pointer-events: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper__content > * {
+  pointer-events: auto;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper--alignY-center .PopoutWrapper__container {
+  align-items: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper--alignY-bottom .PopoutWrapper__container {
+  align-items: flex-end;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper--alignY-top .PopoutWrapper__container {
+  align-items: flex-start;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper--alignX-center .PopoutWrapper__container {
+  justify-content: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper--alignX-left .PopoutWrapper__container {
+  justify-content: flex-start;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.PopoutWrapper--alignX-right .PopoutWrapper__container {
+  justify-content: flex-end;
+}
+
+@keyframes vkui-animation-full-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

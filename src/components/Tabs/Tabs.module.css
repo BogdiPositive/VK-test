@@ -1,0 +1,91 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Tabs__in {
+  display: flex;
+  align-items: stretch;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Tabs--withGaps {
+  justify-content: flex-start;
+}
+
+/**
+ * CMP:
+ * PanelHeader
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalPanelHeader) .Tabs {
+  overflow: hidden;
+/* stylelint-disable-next-line custom-property-pattern */
+  font-family: var(--vkui--font_family_base);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalPanelHeader) .Tabs::after {
+  display: block;
+  width: 1000px;
+  content: '';
+}
+
+/**
+ * CMP:
+ * Group
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalGroup--mode-plain) > .Tabs--mode-default:first-child {
+  margin-top: -8px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalGroup--mode-card) > .Tabs--mode-default:first-child {
+  margin-top: -4px;
+}
+
+/*
+ * CMP:
+ * FixedLayout
+ */
+
+/* Нужно для закрашивания прозрачной области нижнего инсета на iphone x */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFixedLayout--ios):global(.vkuiInternalFixedLayout--vertical-bottom)
+/* stylelint-disable-next-line selector-class-pattern */
+  .Tabs::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_background_content);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalFixedLayout--ios):global(.vkuiInternalFixedLayout--vertical-bottom) .Tabs__in,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+:global(.vkuiInternalFixedLayout--ios):global(.vkuiInternalFixedLayout--vertical-bottom)
+/* stylelint-disable-next-line selector-class-pattern */
+  .Separator {
+  position: relative;
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui_internal--z_index_tabs);
+}

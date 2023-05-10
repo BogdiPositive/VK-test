@@ -1,0 +1,96 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Counter--mode-primary {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_background_accent);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Counter--mode-secondary {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_icon_secondary);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast_themed);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Counter--mode-prominent {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_accent_red);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Counter--mode-contrast {
+/* stylelint-disable-next-line custom-property-pattern */
+  background: var(--vkui--color_background_content);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_accent_themed);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Counter--size-m {
+  height: 24px;
+  min-width: 24px;
+  border-radius: 12px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Counter--size-s {
+  height: 18px;
+  min-width: 18px;
+  border-radius: 9px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Counter--mode-inherit {
+  background-color: var(
+/* stylelint-disable-next-line custom-property-pattern */
+    --vkui_internal--counter_inherit_background,
+/* stylelint-disable-next-line custom-property-pattern */
+    var(--vkui--color_icon_secondary)
+  );
+/* stylelint-disable-next-line custom-property-pattern */
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui_internal--counter_inherit_color, var(--vkui--color_text_contrast_themed));
+}
+
+/**
+ * CMP:
+ * PanelHeaderButton
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalPanelHeaderButton) .Counter {
+  position: absolute;
+  padding: 0;
+  top: 8px;
+  right: 2px;
+}
+
+/**
+ * CMP:
+ * TabbarItem
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:global(.vkuiInternalTabbarItem__label) .Counter {
+  position: absolute;
+  top: -2px;
+  right: -9px;
+}

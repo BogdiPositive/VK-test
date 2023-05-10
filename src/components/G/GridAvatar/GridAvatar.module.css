@@ -1,0 +1,52 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.GridAvatar {
+  border-radius: 50%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.GridAvatar__in {
+  display: flex;
+  flex-flow: column wrap;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.GridAvatar__item {
+/* stylelint-disable-next-line custom-property-pattern */
+  width: calc(50% - var(--vkui_internal--grid_avatar_image_offset) / 2);
+/* stylelint-disable-next-line custom-property-pattern */
+  height: calc(50% - var(--vkui_internal--grid_avatar_image_offset) / 2);
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-right: var(--vkui_internal--grid_avatar_image_offset);
+  background-size: cover;
+  background-position: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.GridAvatar__item:only-child {
+  width: 100%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.GridAvatar__item:first-child:not(:nth-last-child(4)),
+/* stylelint-disable-next-line selector-class-pattern */
+.GridAvatar__item:nth-child(2):last-child {
+  height: 100%;
+}
+
+/* если есть минимум три элемента — выбираем второй с конца */
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.GridAvatar__item:nth-last-child(n + 3) ~ .GridAvatar__item:nth-last-child(2),
+/* stylelint-disable-next-line selector-class-pattern */
+/* четвертый с конца */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+.GridAvatar__item:nth-last-child(4) {
+/* stylelint-disable-next-line custom-property-pattern */
+  margin-bottom: var(--vkui_internal--grid_avatar_image_offset);
+}

@@ -1,0 +1,104 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Input {
+  position: relative;
+  line-height: 20px;
+  font-size: 16px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Input--align-center .Input__el {
+  text-align: center;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Input--align-right .Input__el {
+  text-align: right;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line no-descending-specificity */
+/* stylelint-disable-next-line selector-class-pattern */
+.Input__el {
+/* stylelint-disable-next-line custom-property-pattern */
+  height: var(--vkui--size_field_height--regular);
+  margin: 0;
+  width: 100%;
+  box-sizing: border-box;
+  box-shadow: none;
+  border: none;
+  border-radius: inherit;
+  appearance: none;
+  font-family: inherit;
+/* stylelint-disable-next-line custom-property-pattern */
+  font-weight: var(--vkui--font_text--font_weight--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_text--font_size--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_text--line_height--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+  padding: 0 12px;
+  position: relative;
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui_internal--z_index_form_field_element);
+  background: transparent;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Input--sizeY-compact .Input__el {
+/* stylelint-disable-next-line custom-property-pattern */
+  height: var(--vkui--size_field_height--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+  font-size: var(--vkui--font_text--font_size--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+  line-height: var(--vkui--font_text--line_height--compact);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Input--hasBefore .Input__el {
+  padding-left: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Input--hasAfter .Input__el {
+  padding-right: 0;
+}
+
+@media (--sizeY-compact) {
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+  .Input--sizeY-none .Input__el {
+/* stylelint-disable-next-line custom-property-pattern */
+    height: var(--vkui--size_field_height--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+    font-size: var(--vkui--font_text--font_size--compact);
+/* stylelint-disable-next-line custom-property-pattern */
+    line-height: var(--vkui--font_text--line_height--compact);
+  }
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Input__el:disabled {
+/* stylelint-disable-next-line custom-property-pattern */
+  opacity: var(--vkui--opacity_disable_accessibility);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Input__el::placeholder {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_secondary);
+/* stylelint-disable-next-line comment-empty-line-before */
+  /* Для Firefox */
+  opacity: 1;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Input__el:disabled::placeholder {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_secondary);
+}

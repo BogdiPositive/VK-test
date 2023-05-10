@@ -1,0 +1,162 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Root--transition {
+  pointer-events: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Root__view {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Root--transition .Root__view {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Root__scrollCompensation {
+  width: 100%;
+  height: 100%;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Root__view--show-forward {
+/* stylelint-disable-next-line custom-property-pattern */
+  animation: vkui-root-android-animation-show-forward 0.3s var(--vkui--animation_easing_platform);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Root__view--hide-back {
+/* stylelint-disable-next-line custom-property-pattern */
+  animation: vkui-root-android-animation-hide-back 0.3s var(--vkui--animation_easing_platform)
+    forwards;
+}
+
+/**
+ * iOS
+ */
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Root--ios .Root__view--show-back::after,
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Root--ios .Root__view--hide-forward::after {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  display: block;
+  content: '';
+  background-color: #000;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Root--ios .Root__view--show-back::after {
+/* stylelint-disable-next-line custom-property-pattern */
+  animation: vkui-root-ios-animation-show-back 0.6s var(--vkui--animation_easing_platform) forwards;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Root--ios .Root__view--hide-forward::after {
+/* stylelint-disable-next-line custom-property-pattern */
+  animation: vkui-root-ios-animation-hide-forward 0.6s var(--vkui--animation_easing_platform);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Root--ios .Root__view--show-forward {
+/* stylelint-disable-next-line custom-property-pattern */
+  animation: vkui-root-ios-animation-show-forward 0.6s var(--vkui--animation_easing_platform);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Root--ios .Root__view--hide-back {
+/* stylelint-disable-next-line custom-property-pattern */
+  animation: vkui-root-ios-animation-hide-back 0.6s var(--vkui--animation_easing_platform) forwards;
+}
+
+@keyframes vkui-root-ios-animation-show-back {
+  from {
+    opacity: 0.3;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes vkui-root-ios-animation-hide-forward {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.3;
+  }
+}
+
+@keyframes vkui-root-ios-animation-hide-back {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes vkui-root-ios-animation-show-forward {
+  from {
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/**
+ * Android
+ */
+
+@keyframes vkui-root-android-animation-hide-back {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  to {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+}
+
+@keyframes vkui-root-android-animation-show-forward {
+  from {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

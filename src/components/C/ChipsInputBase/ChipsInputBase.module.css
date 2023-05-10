@@ -1,0 +1,104 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.ChipsInputBase {
+  flex-grow: 1;
+  flex-shrink: 1;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+  padding: 3px;
+/* stylelint-disable-next-line custom-property-pattern */
+  z-index: var(--vkui_internal--z_index_form_field_element);
+  overflow: hidden;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ChipsInputBase__chip {
+  max-width: calc(100% - 4px);
+  margin: 2px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ChipsInputBase__label {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin: 2px 2px 2px 10px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ChipsInputBase__el {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2px;
+  padding: 0;
+/* stylelint-disable-next-line comment-empty-line-before */
+  /* Визуальная компенсация - центрируем строчные буквы */
+  font-size: 15px;
+  line-height: 26px;
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  appearance: none;
+  font-family: inherit;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ChipsInputBase__el:focus {
+  min-width: 64px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ChipsInputBase__el::-ms-clear {
+  display: none;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ChipsInputBase__el:disabled {
+/* stylelint-disable-next-line custom-property-pattern */
+  opacity: var(--vkui--opacity_disable_accessibility);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ChipsInputBase__el::placeholder {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_secondary);
+/* stylelint-disable-next-line comment-empty-line-before */
+  /* Для Firefox */
+  opacity: 1;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ChipsInputBase__el:disabled::placeholder {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_secondary);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.ChipsInputBase__el[readonly] {
+  cursor: default;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ChipsInputBase--hasPlaceholder .ChipsInputBase__label {
+  margin-left: 9px;
+  margin-right: 0;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.ChipsInputBase--hasPlaceholder .ChipsInputBase__el {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/**
+ * sizeY COMPACT
+ */
+/* stylelint-disable-next-line selector-class-pattern */
+.ChipsInputBase--sizeY-compact {
+  padding: 1px;
+}

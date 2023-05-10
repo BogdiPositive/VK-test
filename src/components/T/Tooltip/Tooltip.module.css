@@ -1,0 +1,93 @@
+/* stylelint-disable-next-line selector-class-pattern */
+.Tooltip {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  white-space: normal;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Tooltip__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_modal);
+/* stylelint-disable-next-line custom-property-pattern */
+  box-shadow: var(--vkui--elevation3);
+  padding: 9px 12px 10px;
+/* stylelint-disable-next-line custom-property-pattern */
+  border-radius: var(--vkui--size_border_radius--regular);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary);
+  max-width: 220px;
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+.Tooltip__arrow {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_background_modal);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Tooltip--appearance-accent .Tooltip__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_accent_tint);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Tooltip--appearance-accent .Tooltip__arrow {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_background_accent_tint);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Tooltip--appearance-white .Tooltip__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_contrast);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_primary_invariably);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Tooltip--appearance-white .Tooltip__arrow {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_background_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Tooltip--appearance-black .Tooltip__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_contrast_inverse);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Tooltip--appearance-black .Tooltip__arrow {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_background_contrast_inverse);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Tooltip--appearance-inversion .Tooltip__content {
+/* stylelint-disable-next-line custom-property-pattern */
+  background-color: var(--vkui--color_background_modal_inverse);
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_text_contrast_themed);
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+/* stylelint-disable-next-line selector-class-pattern */
+.Tooltip--appearance-inversion .Tooltip__arrow {
+/* stylelint-disable-next-line custom-property-pattern */
+  color: var(--vkui--color_background_modal_inverse);
+}
